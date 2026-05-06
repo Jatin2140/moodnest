@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1067689461262",
+    "project_id": "moodnest-jatin",
+    "storage_bucket": "moodnest-jatin.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067689461262:android:158033c81979663a25de5f",
+        "android_client_info": {
+          "package_name": "com.example.moodnest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8K073B1qFIhN5OXsU6BDtWgnWiXOjtAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
