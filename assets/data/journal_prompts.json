@@ -1,0 +1,22 @@
+[
+  { "id": "jp_001", "text": "What is one small thing that went well today?", "moods": ["low", "neutral"] },
+  { "id": "jp_002", "text": "Describe a moment today where you felt at peace.", "moods": ["calm", "joyful"] },
+  { "id": "jp_003", "text": "What are you grateful for right now, in this exact moment?", "moods": ["joyful", "calm", "neutral"] },
+  { "id": "jp_004", "text": "What is one thing weighing on your mind? Can you set it aside for 10 minutes?", "moods": ["stressed", "low"] },
+  { "id": "jp_005", "text": "Write about something that made you smile recently.", "moods": ["joyful", "neutral"] },
+  { "id": "jp_006", "text": "What would you tell a friend who felt exactly the way you do right now?", "moods": ["low", "stressed"] },
+  { "id": "jp_007", "text": "Name three people who have positively impacted you this week.", "moods": ["neutral", "joyful", "calm"] },
+  { "id": "jp_008", "text": "What is one boundary you upheld today? How did that feel?", "moods": ["stressed", "neutral"] },
+  { "id": "jp_009", "text": "Describe the best version of your tomorrow.", "moods": ["low", "neutral", "calm"] },
+  { "id": "jp_010", "text": "What is something you've been putting off? What's one tiny step toward it?", "moods": ["neutral", "stressed"] },
+  { "id": "jp_011", "text": "Write about a place where you feel completely safe and at ease.", "moods": ["stressed", "low"] },
+  { "id": "jp_012", "text": "What does your body need most right now?", "moods": ["stressed", "low", "neutral"] },
+  { "id": "jp_013", "text": "Celebrate something you did well this week, no matter how small.", "moods": ["low", "neutral"] },
+  { "id": "jp_014", "text": "What is your mood trying to tell you?", "moods": ["stressed", "low", "neutral"] },
+  { "id": "jp_015", "text": "Write about something beautiful you noticed today.", "moods": ["calm", "joyful", "neutral"] },
+  { "id": "jp_016", "text": "If your current feeling were a weather pattern, what would it be?", "moods": ["stressed", "low", "neutral", "calm"] },
+  { "id": "jp_017", "text": "What do you want to let go of before you sleep tonight?", "moods": ["stressed", "low"] },
+  { "id": "jp_018", "text": "What brought you joy today, even briefly?", "moods": ["neutral", "joyful", "calm"] },
+  { "id": "jp_019", "text": "Write a letter of encouragement to yourself from three years in the future.", "moods": ["low", "stressed"] },
+  { "id": "jp_020", "text": "What did you learn about yourself today?", "moods": ["neutral", "calm", "joyful"] }
+]

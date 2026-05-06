@@ -1,0 +1,63 @@
+[
+  {
+    "id": "bp_001",
+    "name": "Box Breathing",
+    "description": "The Navy SEAL technique: inhale, hold, exhale, hold — all for 4 counts each. Builds calm focus.",
+    "phases": [
+      { "label": "Breathe in", "seconds": 4, "isHold": false },
+      { "label": "Hold", "seconds": 4, "isHold": true },
+      { "label": "Breathe out", "seconds": 4, "isHold": false },
+      { "label": "Hold", "seconds": 4, "isHold": true }
+    ],
+    "tags": ["stress", "focus", "calm"],
+    "moodFit": { "joyful": 0.5, "calm": 0.8, "neutral": 0.9, "low": 0.7, "stressed": 0.95 },
+    "intensity": 0.4,
+    "idealTimeBands": ["morning", "afternoon", "evening"],
+    "recommendedCycles": 8
+  },
+  {
+    "id": "bp_002",
+    "name": "4-7-8 Technique",
+    "description": "Inhale for 4, hold for 7, exhale for 8. Dr. Weil's relaxation breath — works like a sedative.",
+    "phases": [
+      { "label": "Breathe in", "seconds": 4, "isHold": false },
+      { "label": "Hold", "seconds": 7, "isHold": true },
+      { "label": "Breathe out", "seconds": 8, "isHold": false }
+    ],
+    "tags": ["sleep", "anxiety", "relax"],
+    "moodFit": { "joyful": 0.4, "calm": 0.9, "neutral": 0.7, "low": 0.8, "stressed": 0.95 },
+    "intensity": 0.2,
+    "idealTimeBands": ["evening", "night"],
+    "recommendedCycles": 4
+  },
+  {
+    "id": "bp_003",
+    "name": "Coherent Breathing",
+    "description": "5 seconds in, 5 seconds out — the pace that optimises heart rate variability and wellbeing.",
+    "phases": [
+      { "label": "Breathe in", "seconds": 5, "isHold": false },
+      { "label": "Breathe out", "seconds": 5, "isHold": false }
+    ],
+    "tags": ["calm", "balance", "heart"],
+    "moodFit": { "joyful": 0.6, "calm": 0.95, "neutral": 0.9, "low": 0.7, "stressed": 0.8 },
+    "intensity": 0.25,
+    "idealTimeBands": ["morning", "afternoon", "evening"],
+    "recommendedCycles": 10
+  },
+  {
+    "id": "bp_004",
+    "name": "Energiser Breath",
+    "description": "Short inhale, even shorter hold, quick exhale — kicks your system into gear without caffeine.",
+    "phases": [
+      { "label": "Breathe in", "seconds": 6, "isHold": false },
+      { "label": "Hold", "seconds": 2, "isHold": true },
+      { "label": "Breathe out", "seconds": 4, "isHold": false },
+      { "label": "Hold", "seconds": 2, "isHold": true }
+    ],
+    "tags": ["energy", "wake-up", "morning"],
+    "moodFit": { "joyful": 0.8, "calm": 0.4, "neutral": 0.7, "low": 0.9, "stressed": 0.3 },
+    "intensity": 0.75,
+    "idealTimeBands": ["morning", "afternoon"],
+    "recommendedCycles": 6
+  }
+]
