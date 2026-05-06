@@ -12,7 +12,20 @@
           "package_name": "com.example.moodnest"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1067689461262-18iva7g50r7v0l0u3r8tdecohdkqtrle.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.moodnest",
+            "certificate_hash": "8f6439346e70ff9cf8608e0afb514e492d27ca4c"
+          }
+        },
+        {
+          "client_id": "1067689461262-r8in763ob0ier1vla43dos65lk4o7p37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA8K073B1qFIhN5OXsU6BDtWgnWiXOjtAs"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067689461262-r8in763ob0ier1vla43dos65lk4o7p37.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1067689461262-r50ld9tuhp0bv8q90g4i028a3dalkqt2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.moodnest"
+              }
+            }
+          ]
         }
       }
     }
