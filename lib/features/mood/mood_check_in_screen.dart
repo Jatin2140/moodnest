@@ -157,6 +157,11 @@ class _MoodCheckInScreenState extends State<MoodCheckInScreen> {
                   final active = _tags.contains(tag);
                   return FilterChip(
                     label: Text(tag),
+                    labelStyle: TextStyle(
+                      color: isDark
+                          ? AppColors.textPrimaryDark
+                          : AppColors.textPrimary,
+                    ),
                     selected: active,
                     onSelected: (v) => setState(() {
                       if (v) {
