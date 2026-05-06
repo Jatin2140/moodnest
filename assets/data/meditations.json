@@ -5,7 +5,7 @@
     "description": "Start your day with a gentle gratitude practice to set a positive tone.",
     "category": "focus",
     "durationSeconds": 300,
-    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "audioAsset": "assets/audio/meditations/ambient_forest.wav",
     "tags": [
       "gratitude",
       "morning",
@@ -29,7 +29,7 @@
     "description": "A slow, grounding body scan to ease tension and prepare for sleep.",
     "category": "body_scan",
     "durationSeconds": 600,
-    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "audioAsset": "assets/audio/meditations/ambient_space.wav",
     "tags": [
       "sleep",
       "relax",
@@ -54,7 +54,7 @@
     "description": "A short session to clear mental clutter and re-centre your attention.",
     "category": "focus",
     "durationSeconds": 240,
-    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "audioAsset": "assets/audio/meditations/ambient_rain.wav",
     "tags": [
       "focus",
       "clarity",
@@ -104,7 +104,7 @@
     "description": "A brisk guided session to boost your energy and mood.",
     "category": "focus",
     "durationSeconds": 180,
-    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "audioAsset": "assets/audio/meditations/ambient_forest.wav",
     "tags": [
       "energy",
       "uplifting",
@@ -129,7 +129,7 @@
     "description": "Drift into restful sleep with this soothing night meditation.",
     "category": "sleep",
     "durationSeconds": 900,
-    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "audioAsset": "assets/audio/meditations/ambient_space.wav",
     "tags": [
       "sleep",
       "rest",
@@ -153,7 +153,7 @@
     "description": "A 4-minute pause to decompress and return to your afternoon refreshed.",
     "category": "reset",
     "durationSeconds": 240,
-    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "audioAsset": "assets/audio/meditations/ambient_rain.wav",
     "tags": [
       "reset",
       "midday",
