@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import '../models/user_profile.dart';
 import '../../core/utils/result.dart';
 
@@ -80,12 +82,64 @@ class AuthRepository {
         createdAt: DateTime.now(),
       );
       return Ok(profile);
+    } on FirebaseAuthException catch (e) {
+      debugPrint('Anonymous auth failed: ${e.code}');
+      return Err(e.code == 'operation-not-allowed'
+          ? 'Guest login is disabled in Firebase. Please enable Anonymous Sign-In.'
+          : 'Could not start guest session.');
     } catch (e) {
+      debugPrint('Anonymous auth unknown error: $e');
       return Err('Could not start guest session.');
     }
   }
 
-  Future<void> signOut() => _auth.signOut();
+  Future<Result<UserProfile>> signInWithGoogle() async {
+    try {
+      UserCredential cred;
+      if (kIsWeb) {
+        cred = await _auth.signInWithPopup(GoogleAuthProvider());
+      } else {
+        final GoogleSignIn googleSignIn = GoogleSignIn();
+        final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
+
+        if (googleUser == null) {
+          return const Err('Google sign-in was cancelled.');
+        }
+
+        final GoogleSignInAuthentication googleAuth =
+            await googleUser.authentication;
+
+        final OAuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleAuth.accessToken,
+          idToken: googleAuth.idToken,
+        );
+
+        cred = await _auth.signInWithCredential(credential);
+      }
+
+      final doc = await _db.collection('users').doc(cred.user!.uid).get();
+      if (doc.exists) {
+        return Ok(UserProfile.fromMap(doc.data()!));
+      }
+      
+      final profile = UserProfile(
+        uid: cred.user!.uid,
+        displayName: cred.user!.displayName ?? 'Friend',
+        email: cred.user!.email ?? '',
+        createdAt: DateTime.now(),
+      );
+      await _db.collection('users').doc(cred.user!.uid).set(profile.toMap());
+      return Ok(profile);
+    } catch (e) {
+      debugPrint('Google auth error: $e');
+      return const Err('Could not sign in with Google. Ensure it is enabled in Firebase.');
+    }
+  }
+
+  Future<void> signOut() async {
+    await GoogleSignIn().signOut();
+    return _auth.signOut();
+  }
 
   Future<Result<void>> sendPasswordReset(String email) async {
     try {

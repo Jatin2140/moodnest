@@ -50,6 +50,14 @@ class _LoginScreenState extends State<LoginScreen> {
     // Navigation is handled reactively by _HomeDecider in app.dart
   }
 
+  Future<void> _signInWithGoogle(BuildContext context) async {
+    final auth = context.read<AuthProvider>();
+    final ok = await auth.signInWithGoogle();
+    if (!ok && mounted) {
+      _showError(context, auth.error ?? 'Google Sign-In failed.');
+    }
+  }
+
   void _showError(BuildContext context, String msg) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -162,6 +170,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () => _tryFirst(context),
                     isLoading: auth.isLoading,
                     icon: Icons.explore_outlined,
+                    width: double.infinity,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Consumer<AuthProvider>(
+                  builder: (context, auth, _) => MnButton(
+                    label: 'Sign in with Google',
+                    variant: MnButtonVariant.ghost,
+                    onPressed: () => _signInWithGoogle(context),
+                    isLoading: auth.isLoading,
+                    icon: Icons.g_mobiledata_rounded,
                     width: double.infinity,
                   ),
                 ),
