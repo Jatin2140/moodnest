@@ -5,11 +5,23 @@
     "description": "Start your day with a gentle gratitude practice to set a positive tone.",
     "category": "focus",
     "durationSeconds": 300,
-    "audioAsset": "assets/audio/meditations/ambient_soft.mp3",
-    "tags": ["gratitude", "morning", "positive"],
-    "moodFit": { "joyful": 0.9, "calm": 0.8, "neutral": 0.7, "low": 0.6, "stressed": 0.5 },
+    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "tags": [
+      "gratitude",
+      "morning",
+      "positive"
+    ],
+    "moodFit": {
+      "joyful": 0.9,
+      "calm": 0.8,
+      "neutral": 0.7,
+      "low": 0.6,
+      "stressed": 0.5
+    },
     "intensity": 0.3,
-    "idealTimeBands": ["morning"]
+    "idealTimeBands": [
+      "morning"
+    ]
   },
   {
     "id": "med_002",
@@ -17,11 +29,24 @@
     "description": "A slow, grounding body scan to ease tension and prepare for sleep.",
     "category": "body_scan",
     "durationSeconds": 600,
-    "audioAsset": "assets/audio/meditations/ambient_deep.mp3",
-    "tags": ["sleep", "relax", "body-scan"],
-    "moodFit": { "joyful": 0.5, "calm": 0.9, "neutral": 0.7, "low": 0.8, "stressed": 0.9 },
+    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "tags": [
+      "sleep",
+      "relax",
+      "body-scan"
+    ],
+    "moodFit": {
+      "joyful": 0.5,
+      "calm": 0.9,
+      "neutral": 0.7,
+      "low": 0.8,
+      "stressed": 0.9
+    },
     "intensity": 0.1,
-    "idealTimeBands": ["evening", "night"]
+    "idealTimeBands": [
+      "evening",
+      "night"
+    ]
   },
   {
     "id": "med_003",
@@ -29,11 +54,24 @@
     "description": "A short session to clear mental clutter and re-centre your attention.",
     "category": "focus",
     "durationSeconds": 240,
-    "audioAsset": "assets/audio/meditations/ambient_soft.mp3",
-    "tags": ["focus", "clarity", "productivity"],
-    "moodFit": { "joyful": 0.6, "calm": 0.7, "neutral": 0.8, "low": 0.5, "stressed": 0.8 },
+    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "tags": [
+      "focus",
+      "clarity",
+      "productivity"
+    ],
+    "moodFit": {
+      "joyful": 0.6,
+      "calm": 0.7,
+      "neutral": 0.8,
+      "low": 0.5,
+      "stressed": 0.8
+    },
     "intensity": 0.4,
-    "idealTimeBands": ["morning", "afternoon"]
+    "idealTimeBands": [
+      "morning",
+      "afternoon"
+    ]
   },
   {
     "id": "med_004",
@@ -41,11 +79,24 @@
     "description": "Release what you can't control. A compassionate session for heavy feelings.",
     "category": "reset",
     "durationSeconds": 480,
-    "audioAsset": "assets/audio/meditations/ambient_deep.mp3",
-    "tags": ["release", "compassion", "healing"],
-    "moodFit": { "joyful": 0.4, "calm": 0.7, "neutral": 0.6, "low": 0.95, "stressed": 0.85 },
+    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "tags": [
+      "release",
+      "compassion",
+      "healing"
+    ],
+    "moodFit": {
+      "joyful": 0.4,
+      "calm": 0.7,
+      "neutral": 0.6,
+      "low": 0.95,
+      "stressed": 0.85
+    },
     "intensity": 0.2,
-    "idealTimeBands": ["afternoon", "evening"]
+    "idealTimeBands": [
+      "afternoon",
+      "evening"
+    ]
   },
   {
     "id": "med_005",
@@ -53,11 +104,24 @@
     "description": "A brisk guided session to boost your energy and mood.",
     "category": "focus",
     "durationSeconds": 180,
-    "audioAsset": "assets/audio/meditations/ambient_soft.mp3",
-    "tags": ["energy", "uplifting", "morning"],
-    "moodFit": { "joyful": 0.8, "calm": 0.5, "neutral": 0.7, "low": 0.9, "stressed": 0.4 },
+    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "tags": [
+      "energy",
+      "uplifting",
+      "morning"
+    ],
+    "moodFit": {
+      "joyful": 0.8,
+      "calm": 0.5,
+      "neutral": 0.7,
+      "low": 0.9,
+      "stressed": 0.4
+    },
     "intensity": 0.7,
-    "idealTimeBands": ["morning", "afternoon"]
+    "idealTimeBands": [
+      "morning",
+      "afternoon"
+    ]
   },
   {
     "id": "med_006",
@@ -65,11 +129,23 @@
     "description": "Drift into restful sleep with this soothing night meditation.",
     "category": "sleep",
     "durationSeconds": 900,
-    "audioAsset": "assets/audio/meditations/ambient_deep.mp3",
-    "tags": ["sleep", "rest", "night"],
-    "moodFit": { "joyful": 0.4, "calm": 0.9, "neutral": 0.8, "low": 0.7, "stressed": 0.8 },
+    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "tags": [
+      "sleep",
+      "rest",
+      "night"
+    ],
+    "moodFit": {
+      "joyful": 0.4,
+      "calm": 0.9,
+      "neutral": 0.8,
+      "low": 0.7,
+      "stressed": 0.8
+    },
     "intensity": 0.05,
-    "idealTimeBands": ["night"]
+    "idealTimeBands": [
+      "night"
+    ]
   },
   {
     "id": "med_007",
@@ -77,11 +153,23 @@
     "description": "A 4-minute pause to decompress and return to your afternoon refreshed.",
     "category": "reset",
     "durationSeconds": 240,
-    "audioAsset": "assets/audio/meditations/ambient_soft.mp3",
-    "tags": ["reset", "midday", "quick"],
-    "moodFit": { "joyful": 0.6, "calm": 0.7, "neutral": 0.8, "low": 0.6, "stressed": 0.9 },
+    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "tags": [
+      "reset",
+      "midday",
+      "quick"
+    ],
+    "moodFit": {
+      "joyful": 0.6,
+      "calm": 0.7,
+      "neutral": 0.8,
+      "low": 0.6,
+      "stressed": 0.9
+    },
     "intensity": 0.35,
-    "idealTimeBands": ["afternoon"]
+    "idealTimeBands": [
+      "afternoon"
+    ]
   },
   {
     "id": "med_008",
@@ -89,10 +177,23 @@
     "description": "Turn kindness inward. A gentle practice for when you're being hard on yourself.",
     "category": "reset",
     "durationSeconds": 420,
-    "audioAsset": "assets/audio/meditations/ambient_deep.mp3",
-    "tags": ["self-compassion", "kindness", "healing"],
-    "moodFit": { "joyful": 0.5, "calm": 0.8, "neutral": 0.6, "low": 0.95, "stressed": 0.7 },
+    "audioAsset": "assets/audio/meditations/ambient_ocean.wav",
+    "tags": [
+      "self-compassion",
+      "kindness",
+      "healing"
+    ],
+    "moodFit": {
+      "joyful": 0.5,
+      "calm": 0.8,
+      "neutral": 0.6,
+      "low": 0.95,
+      "stressed": 0.7
+    },
     "intensity": 0.15,
-    "idealTimeBands": ["morning", "evening"]
+    "idealTimeBands": [
+      "morning",
+      "evening"
+    ]
   }
 ]

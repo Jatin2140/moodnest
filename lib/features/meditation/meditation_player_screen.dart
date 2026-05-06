@@ -37,32 +37,15 @@ class _MeditationPlayerScreenState extends State<MeditationPlayerScreen>
       duration: const Duration(seconds: 3),
     )..repeat(reverse: true);
 
-    _player.onPositionChanged.listen((p) {
-      if (mounted) setState(() => _position = p);
-      final pct = _duration.inSeconds > 0
-          ? p.inSeconds / _duration.inSeconds
-          : 0.0;
-      if (pct >= 0.8 && !_completed) {
-        _completed = true;
-        _onCompleted();
-      }
-    });
-    _player.onDurationChanged.listen((d) {
-      if (mounted) setState(() => _duration = d);
-    });
-    _player.onPlayerComplete.listen((_) {
-      if (mounted) setState(() {
-        _playing = false;
-        _position = Duration.zero;
-      });
-    });
+    _player.setReleaseMode(ReleaseMode.loop);
+    _duration = Duration(seconds: widget.meditation.durationSeconds);
 
     _startPlayback();
   }
 
   bool _noAudio = false;
 
-  void _startFallbackTimer() {
+  void _startTimer() {
     _fallbackTimer?.cancel();
     _fallbackTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (!_playing) return;
@@ -72,11 +55,15 @@ class _MeditationPlayerScreenState extends State<MeditationPlayerScreen>
           if (_position >= _duration) {
             _position = _duration;
             _playing = false;
+            _player.stop();
             if (!_completed) {
               _completed = true;
               _onCompleted();
             }
             timer.cancel();
+          } else if (_position.inSeconds >= _duration.inSeconds * 0.8 && !_completed) {
+            _completed = true;
+            _onCompleted();
           }
         });
       }
@@ -88,31 +75,31 @@ class _MeditationPlayerScreenState extends State<MeditationPlayerScreen>
       await _player.play(AssetSource(
         widget.meditation.audioAsset.replaceFirst('assets/', ''),
       ));
-      if (mounted) setState(() => _playing = true);
+      if (mounted) setState(() {
+        _playing = true;
+        _noAudio = false;
+      });
+      _startTimer();
     } catch (_) {
       // Audio asset not bundled
       if (mounted) {
         setState(() {
           _noAudio = true;
-          _duration = Duration(seconds: widget.meditation.durationSeconds);
           _playing = true;
         });
-        _startFallbackTimer();
+        _startTimer();
       }
     }
   }
 
   Future<void> _togglePlay() async {
     HapticFeedback.lightImpact();
-    if (_noAudio) {
-      if (mounted) setState(() => _playing = !_playing);
-      return;
-    }
-
-    if (_playing) {
-      await _player.pause();
-    } else {
-      await _player.resume();
+    if (!_noAudio) {
+      if (_playing) {
+        await _player.pause();
+      } else {
+        await _player.resume();
+      }
     }
     if (mounted) setState(() => _playing = !_playing);
   }
@@ -124,11 +111,7 @@ class _MeditationPlayerScreenState extends State<MeditationPlayerScreen>
         ? Duration.zero
         : (_duration > Duration.zero && target > _duration ? _duration : target);
     
-    if (_noAudio) {
-      if (mounted) setState(() => _position = clamped);
-      return;
-    }
-    await _player.seek(clamped);
+    if (mounted) setState(() => _position = clamped);
   }
 
   void _onCompleted() {
@@ -315,11 +298,7 @@ class _MeditationPlayerScreenState extends State<MeditationPlayerScreen>
                           final target = Duration(
                             seconds: (v * _duration.inSeconds).round(),
                           );
-                          if (_noAudio) {
-                            if (mounted) setState(() => _position = target);
-                          } else {
-                            _player.seek(target);
-                          }
+                          if (mounted) setState(() => _position = target);
                         },
                       ),
                     ),
